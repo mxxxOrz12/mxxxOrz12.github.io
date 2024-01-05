@@ -1,0 +1,704 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="测量平差1 绪论一些关于测量和误差的常识性知识：    测量平差： 测量误差及其传播率测量误差粗差：由作业人员粗心大意或仪器故障所造成的差错。 特点：没有规律性，单个误差具有离群的特征。 系统误差：由测量条件中某些特定因素的系统性影响产生的误差。 特定：同等测量条件下，大小和符号规律变化，具有累积性。 如尺长误差、电离层误差等。 偶然误差（随机误差）:由测量条件中各种随机因素的偶然性影响而产生的误">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/01/05/%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E8%AF%AF%E5%B7%AE%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="测量平差1 绪论一些关于测量和误差的常识性知识：    测量平差： 测量误差及其传播率测量误差粗差：由作业人员粗心大意或仪器故障所造成的差错。 特点：没有规律性，单个误差具有离群的特征。 系统误差：由测量条件中某些特定因素的系统性影响产生的误差。 特定：同等测量条件下，大小和符号规律变化，具有累积性。 如尺长误差、电离层误差等。 偶然误差（随机误差）:由测量条件中各种随机因素的偶然性影响而产生的误">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/UOoq3hQWGzKr7D2.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/q6onPQ1tcmTVb3R.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/uw6l4CGWJvrcIan.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/iFEcvQ54DbMtfgJ.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/HZzukKIM9aSYQsv.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/VrW68Q9pRvNTocy.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/OUATlzo5YQK31J8.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/7GcLSBke18CTUq6.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/04/8gocB1v23bkCPHL.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/JsZkmVKeFOHWjaU.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/vbJxISBnERsoklf.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/95aUiTMPdCq8F3j.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/tyEYPgAfNGi3lVQ.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/vm6cAf5ushDWbHe.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/87GkbmPd1e49W2s.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/LxsBaEbf7uqXC2A.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/uH2WbpGfOA9Xoxs.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/T4ixvRYPENfB2wX.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/CZIjfvouGsAMKar.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/eHBbwaGM7rgzKhJ.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/vn3Y4IqcR1SC28o.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/05/vAGdMCQUu1HTypK.png">
+<meta property="article:published_time" content="2024-01-05T15:24:44.347Z">
+<meta property="article:modified_time" content="2024-01-05T15:24:17.727Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s2.loli.net/2024/01/05/UOoq3hQWGzKr7D2.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>mxxxOrz</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://s2.loli.net/2023/10/03/FBoj63HuEYUSX9w.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        John Doe
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-01-05 23:24" pubdate>
+          2024年1月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          919 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="测量平差"><a href="#测量平差" class="headerlink" title="测量平差"></a>测量平差</h1><h2 id="1-绪论"><a href="#1-绪论" class="headerlink" title="1 绪论"></a>1 绪论</h2><p>一些关于测量和误差的常识性知识：</p>
+<p><img src="https://s2.loli.net/2024/01/05/UOoq3hQWGzKr7D2.png" srcset="/img/loading.gif" lazyload alt="image-20240105195515487"></p>
+<p><img src="https://s2.loli.net/2024/01/05/q6onPQ1tcmTVb3R.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s2.loli.net/2024/01/05/uw6l4CGWJvrcIan.png" srcset="/img/loading.gif" lazyload alt="image-20240105200304625"></p>
+<p>测量平差：</p>
+<h2 id="测量误差及其传播率"><a href="#测量误差及其传播率" class="headerlink" title="测量误差及其传播率"></a>测量误差及其传播率</h2><h3 id="测量误差"><a href="#测量误差" class="headerlink" title="测量误差"></a>测量误差</h3><p><strong>粗差：由作业人员粗心大意或仪器故障所造成的差错。</strong></p>
+<p>特点：没有规律性，单个误差具有离群的特征。</p>
+<p><strong>系统误差：由测量条件中某些特定因素的系统性影响产生的误差。</strong></p>
+<p>特定：同等测量条件下，大小和符号规律变化，具有累积性。</p>
+<p>如尺长误差、电离层误差等。</p>
+<p><strong>偶然误差（随机误差）:由测量条件中各种随机因素的偶然性影响而产生的误差。</strong></p>
+<p>特点：</p>
+<ol>
+<li>产生误差的原因是随机的</li>
+<li>原因是多方面的</li>
+<li>单个误差的大小、符号无规律</li>
+<li>误差总体上服从统计规律</li>
+</ol>
+<p><img src="https://s2.loli.net/2024/01/05/iFEcvQ54DbMtfgJ.png" srcset="/img/loading.gif" lazyload alt="image-20240105220020938"></p>
+<p><img src="https://s2.loli.net/2024/01/05/HZzukKIM9aSYQsv.png" srcset="/img/loading.gif" lazyload alt="image-20240105220115841"></p>
+<p><img src="https://s2.loli.net/2024/01/05/VrW68Q9pRvNTocy.png" srcset="/img/loading.gif" lazyload alt="image-20240105221851032"></p>
+<p>现在等精度测量，那么每站的高差的中误差都为m，根据协方差传播率，得到A、B之间高差的中误差式子如图上所示。</p>
+<h3 id="误差评定"><a href="#误差评定" class="headerlink" title="误差评定"></a>误差评定</h3><p>什么是权，在平差中其十分重要，当我们测量水准路线时，两段长度不等，即观测精度不等，那么如何利用它们的观测值进行平差呢，这时就要赋予每段路线观测值不同的权重，测量精度越高，权重越大，精度越低权重越小。我们定义，权和方差是成反比的。</p>
+<p>因为权是评定相对精度的，单个权不存在，只有权阵的形式。</p>
+<p><img src="https://s2.loli.net/2024/01/05/OUATlzo5YQK31J8.png" srcset="/img/loading.gif" lazyload alt="image-20240105223259353"></p>
+<p>协因数是权的倒数，和权的作用类似，那么有了权为什么还要定义一个协因数呢，因为我们最后基本都要计算观测量的中误差、方差，而通常他们都是以矩阵阵形式存在，通过协因数和单位权方差估值能够快速计算中误差，而权还需要更麻烦的求逆操作。</p>
+<p><img src="https://s2.loli.net/2024/01/05/7GcLSBke18CTUq6.png" srcset="/img/loading.gif" lazyload alt="image-20240105224132628"></p>
+<p>例题：</p>
+<p><img src="https://s2.loli.net/2024/01/04/8gocB1v23bkCPHL.png" srcset="/img/loading.gif" lazyload alt="image-20240104220013130"></p>
+<h2 id="平差方法"><a href="#平差方法" class="headerlink" title="平差方法"></a>平差方法</h2><p>数学模型：</p>
+<p><img src="https://s2.loli.net/2024/01/05/JsZkmVKeFOHWjaU.png" srcset="/img/loading.gif" lazyload alt="image-20240105230318258"></p>
+<p>随机模型：</p>
+<p><img src="https://s2.loli.net/2024/01/05/vbJxISBnERsoklf.png" srcset="/img/loading.gif" lazyload alt="image-20240105230603604"></p>
+<h3 id="条件平差"><a href="#条件平差" class="headerlink" title="条件平差"></a>条件平差</h3><h2 id="误差椭圆"><a href="#误差椭圆" class="headerlink" title="误差椭圆"></a>误差椭圆</h2><h3 id="点位误差"><a href="#点位误差" class="headerlink" title="点位误差"></a>点位误差</h3><p>点位真误差：由点坐标真值确定的点位P和由平差确定的点位坐标之间的距离。</p>
+<p><img src="https://s2.loli.net/2024/01/05/95aUiTMPdCq8F3j.png" srcset="/img/loading.gif" lazyload alt="image-20240105170038747"></p>
+<p>P点的点位方差等于P点在横纵坐标方向上的方差之和，中误差同理。</p>
+<p><img src="https://s2.loli.net/2024/01/05/tyEYPgAfNGi3lVQ.png" srcset="/img/loading.gif" lazyload alt="image-20240105170406525"></p>
+<p>计算公式如下：</p>
+<p><img src="https://s2.loli.net/2024/01/05/vm6cAf5ushDWbHe.png" srcset="/img/loading.gif" lazyload alt="image-20240105170909299"></p>
+<p>第二个式子是用协因数阵和单位权方差估值计算得到，通常我们用这种方法，因为以间接平差举例，我们容易求得参数的协因数阵，很方便就能获取协因数。</p>
+<p>当我们变换坐标系时（互相垂直），我们发现，点位误差不变。</p>
+<p><img src="https://s2.loli.net/2024/01/05/87GkbmPd1e49W2s.png" srcset="/img/loading.gif" lazyload alt="image-20240105170639701"></p>
+<h3 id="任意方向上的位差计算"><a href="#任意方向上的位差计算" class="headerlink" title="任意方向上的位差计算"></a>任意方向上的位差计算</h3><p><img src="https://s2.loli.net/2024/01/05/LxsBaEbf7uqXC2A.png" srcset="/img/loading.gif" lazyload alt="image-20240105172022782"></p>
+<p>我们可以看到，当我们要求点位在任意方向上的位差，即Δφ，右图可以看到Δφ等于（3）式，根据协因数传播率可以求得</p>
+<p><img src="https://s2.loli.net/2024/01/05/uH2WbpGfOA9Xoxs.png" srcset="/img/loading.gif" lazyload alt="image-20240105172503805"></p>
+<h3 id="位差的极大极小值"><a href="#位差的极大极小值" class="headerlink" title="位差的极大极小值"></a>位差的极大极小值</h3><p>之前我们推导了任意方向上的位差公式，对其求导，得到式子如下：</p>
+<p><img src="https://s2.loli.net/2024/01/05/T4ixvRYPENfB2wX.png" srcset="/img/loading.gif" lazyload alt="image-20240105191101333"></p>
+<p>根据该式，我们可以得到两个值，位差极大方向和极小方向。下面求解协因数，最后确定中误差。</p>
+<p><img src="https://s2.loli.net/2024/01/05/CZIjfvouGsAMKar.png" srcset="/img/loading.gif" lazyload alt="image-20240105191332655"></p>
+<h3 id="误差曲线与误差椭圆"><a href="#误差曲线与误差椭圆" class="headerlink" title="误差曲线与误差椭圆"></a>误差曲线与误差椭圆</h3><p><img src="https://s2.loli.net/2024/01/05/eHBbwaGM7rgzKhJ.png" srcset="/img/loading.gif" lazyload alt="image-20240105194129901"></p>
+<p><strong>误差曲线是误差椭圆正交切线垂足点的轨迹</strong></p>
+<p><img src="https://s2.loli.net/2024/01/05/vn3Y4IqcR1SC28o.png" srcset="/img/loading.gif" lazyload alt="image-20240105195055984"></p>
+<p><img src="https://s2.loli.net/2024/01/05/vAGdMCQUu1HTypK.png" srcset="/img/loading.gif" lazyload alt="image-20240105194925232"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2024/01/05/空间数据误差处理/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年1月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/12/18/%E7%99%BE%E5%BA%A6%E6%9D%BE%E6%9E%9C%E9%A3%9E%E6%B5%86%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" title="百度松果飞浆大作业--图像分类">
+                        <span class="hidden-mobile">百度松果飞浆大作业--图像分类</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://cesi.cumt.edu.cn/" target="_blank" rel="nofollow noopener"><span>CUMT-GIS</span>
+
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
